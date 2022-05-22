@@ -1,2 +1,4 @@
 <!--pages/login/login.wxml-->
-<text>pages/login/login.wxml</text>
+<view>
+    <button bindtap="login">登录</button>
+</view>
