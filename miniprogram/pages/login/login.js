@@ -87,8 +87,8 @@ Page({
             toUrl = '/pages/newAccount/newAccount'
         }
         console.log(toUrl)
-        wx.navigateTo({
-            url: toUrl
+        wx.redirectTo({
+          url: toUrl
         })
     },
 })
