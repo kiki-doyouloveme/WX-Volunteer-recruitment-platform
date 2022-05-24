@@ -1,4 +1,10 @@
 <!--pages/login/login.wxml-->
 <view>
-    <button bindtap="login">登录</button>
+    <image class='logo' src='/images/logo.png'></image>
+    <button class='loginButton' type='primary' bindtap="login">
+        <view>
+            <image style="width: 30px; height: 35px; vertical-align: middle; transform: translateX(-15px);" src='/images/weixin.svg'></image>
+            <text>授权登录</text>
+        </view>
+    </button>
 </view>

@@ -1,1 +1,22 @@
 /* pages/login/login.wxss */
+page {
+    padding-top: 54rpx;
+    background-color: #fff;
+    padding-bottom: 60rpx;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.logo {
+    position: absolute;
+    top: 40%;
+    transform: translateY(-50%);
+}
+
+.loginButton {
+    position: fixed;
+    bottom: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+}

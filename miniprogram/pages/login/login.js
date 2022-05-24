@@ -86,7 +86,6 @@ Page({
         } else {
             toUrl = '/pages/newAccount/newAccount'
         }
-        console.log(toUrl)
         wx.redirectTo({
           url: toUrl
         })
