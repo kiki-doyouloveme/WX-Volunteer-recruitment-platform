@@ -2,6 +2,9 @@
   "pages": [
     "pages/login/login",
     "pages/index/index",
+    "pages/newAccount/newAccount",
+    "pages/volunteer/home/home",
+    "pages/community/home/home",
     "pages/getOpenId/index",
     "pages/getMiniProgramCode/index",
     "pages/deployService/index",
