@@ -1,6 +1,6 @@
 <!--pages/login/login.wxml-->
 <view>
-    <image class='logo' src='/images/logo.png'></image>
+    <image class='logo' src='/images/logo.png' ></image>
     <button class='loginButton' type='primary' bindtap="login">
         <view>
             <image style="width: 30px; height: 35px; vertical-align: middle; transform: translateX(-15px);" src='/images/weixin.svg'></image>

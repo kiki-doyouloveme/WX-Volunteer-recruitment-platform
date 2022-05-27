@@ -1,2 +1,42 @@
 <!--pages/newAccount/newAccount.wxml-->
-<text>新用户界面</text>
+<view>
+    <view>请选择你的身份</view>
+    <radio-group bindchange="radioChange">
+        <label wx:for="{{items}}" wx:key="value">
+            <view>
+                <radio value="{{item.value}}" />{{item.name}}
+            </view>
+        </label>
+    </radio-group>
+
+    <view hidden='{{identity !== "volunteer"}}'>
+        <form>
+            <text>姓名</text> <input focus value="{{volunteer.name}}" placeholder="请输入您的姓名" bindblur="inputVolunteerName" />
+            <text>性别</text>
+            <radio-group bindchange="sexChange">
+                <label wx:for="{{sex}}" wx:key="value">
+                    <view>
+                        <radio value="{{item.value}}" checked="{{item.checked}}" />{{item.name}}
+                    </view>
+                </label>
+            </radio-group>
+            <text>年龄</text> <input type="number" maxlength="2" focus value="{{volunteer.age}}" placeholder="请输入您的年龄" bindblur="inputVolunteerAge" />
+            <text>联系电话</text> <input type="number" focus value="{{volunteer.phoneNumber}}" bindblur="inputVolunteerPhoneNumber" placeholder="请输入您的联系电话" />
+            <button type="primary" bindtap="volunteerCommit">确认提交</button>
+        </form>
+    </view>
+
+    <view hidden='{{identity !== "community"}}'>
+        <form>
+            <text>社区名</text> <input focus value="{{community.name}}" placeholder="请输入社区的名字" bindblur="inputCommunityName" />
+            <text>联系人姓名</text> <input focus value="{{community.contact}}" placeholder="请输入社区联系人的姓名" bindblur="inputCommunityContact" />
+            <text>联系电话</text> <input type="number" focus value="{{community.phoneNumber}}" bindblur="inputCommunityPhoneNumber" placeholder="请输入社区的联系电话" />
+            <view>
+                <text>请上传一份文件来进行社区认证</text>
+                <button bindtap="chooseFile">选择文件</button>
+                <text>{{fileName}}</text>     
+            </view>
+            <button type="primary" bindtap="communityCommit">确认提交</button>
+        </form>
+    </view>
+</view>
