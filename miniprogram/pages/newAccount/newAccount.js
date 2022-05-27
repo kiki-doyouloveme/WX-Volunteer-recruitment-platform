@@ -196,7 +196,7 @@ Page({
     volunteerCommit() {
         let that = this
         let canVolunteerSubmit = that.data.canVolunteerSubmit
-        if (! (canVolunteerSubmit.name || canVolunteerSubmit.age || canVolunteerSubmit.phoneNumber)) {
+        if (! (canVolunteerSubmit.name && canVolunteerSubmit.age && canVolunteerSubmit.phoneNumber)) {
             wx.showToast({
                 title: '请确认输入无误后再提交',
                 duration: 2000,
@@ -286,6 +286,7 @@ Page({
         let accountInfo = await wx.getStorage({
             key: "accountInfo",
         })
+        console.log(accountInfo)
         let fileInfo = await wx.cloud.uploadFile({
             cloudPath: accountInfo.data.openid + "/" + res.tempFiles[0].name,
             filePath: res.tempFiles[0].path
@@ -306,8 +307,7 @@ Page({
     communityCommit() {
         let that = this
         let canCommunitySubmit = that.data.canCommunitySubmit
-        console.log(canCommunitySubmit.name || canCommunitySubmit.phoneNumberfalse || canCommunitySubmit.contact || canCommunitySubmit.authentication)
-        if (! (canCommunitySubmit.name || canCommunitySubmit.phoneNumberfalse || canCommunitySubmit.contact || canCommunitySubmit.authentication)) {
+        if (! (canCommunitySubmit.name && canCommunitySubmit.phoneNumber && canCommunitySubmit.contact && canCommunitySubmit.authentication)) {
             wx.showToast({
                 title: '请确认输入无误后再提交',
                 duration: 2000,

@@ -26,7 +26,12 @@ exports.main = async (event, context) => {
                 data: data
             }
         })
-        return data
+        return {
+            openid : openid,
+            nickName : data.nickName,
+            avatarUrl : data.avatarUrl,
+            identity : data.identity
+        }
     } else {
         // 向页面返回用户信息
         return {
