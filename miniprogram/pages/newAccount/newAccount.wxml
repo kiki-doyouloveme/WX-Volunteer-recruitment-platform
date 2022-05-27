@@ -47,9 +47,9 @@
                 <input class="text" type="number" focus value="{{community.phoneNumber}}" style="float: right;" bindblur="inputCommunityPhoneNumber" placeholder="请输入社区的联系电话" />
             </view>
             <view>
-                <text class="text" style="font-weight: 900;">请上传社区认证文件</text>
-                <button class="text" bindtap="chooseFile">选择</button>
-                <input focus value="{{fileName}}" style="float: left;" placeholder="" disabled="true"/>
+                <text class="text" style="font-weight: 900;">社区认证文件</text>
+                <button class="text" type="default" style="margin-left: 45px; height: fit-content; width: fit-content;" bindtap="chooseFile">上传</button>
+                <input focus value="{{fileName}}" placeholder="" disabled="true" />
             </view>
             <button class="submit" type="primary" bindtap="communityCommit">确认提交</button>
         </form>

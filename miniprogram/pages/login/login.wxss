@@ -9,9 +9,9 @@ page {
 }
 
 .logo {
-    position: absolute;
-    top: 40%;
-    transform: translateY(-50%);
+    position: fixed;
+    top: 25%;
+    left: 56rpx;
 }
 
 .loginButton {

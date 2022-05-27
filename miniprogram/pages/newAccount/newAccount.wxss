@@ -5,7 +5,8 @@
     margin-top: 30px;
 }
 .info {
-    text-align: left;
+    width: 320px;
+    text-align: middle;
     margin-top: 80px;
     line-height: 50px;
 }
