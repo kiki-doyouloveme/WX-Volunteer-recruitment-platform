@@ -1,42 +1,57 @@
 <!--pages/newAccount/newAccount.wxml-->
-<view>
-    <view>请选择你的身份</view>
+<view class="container">
+    <text style="font-weight: 900;">请选择你的身份</text>
     <radio-group bindchange="radioChange">
         <label wx:for="{{items}}" wx:key="value">
-            <view>
-                <radio value="{{item.value}}" />{{item.name}}
-            </view>
+            <radio style="margin-left: 20px;" value="{{item.value}}" />{{item.name}}
         </label>
     </radio-group>
 
-    <view hidden='{{identity !== "volunteer"}}'>
+    <view class="info" hidden='{{identity !== "volunteer"}}'>
         <form>
-            <text>姓名</text> <input focus value="{{volunteer.name}}" placeholder="请输入您的姓名" bindblur="inputVolunteerName" />
-            <text>性别</text>
-            <radio-group bindchange="sexChange">
-                <label wx:for="{{sex}}" wx:key="value">
-                    <view>
+            <view>
+                <text class="text" style="font-weight: 900;">姓名</text>
+                <input adjust-position="{{ false }}" class="text" style="float: right;" focus value="{{volunteer.name}}" placeholder="请输入您的姓名" bindblur="inputVolunteerName" />
+            </view>
+            <view>
+                <text class="text" style="font-weight: 900;">性别</text>
+                <radio-group class="text" style="float: right;" bindchange="sexChange">
+                    <label style="margin-left: 40px;" wx:for="{{sex}}" wx:key="value">
                         <radio value="{{item.value}}" checked="{{item.checked}}" />{{item.name}}
-                    </view>
-                </label>
-            </radio-group>
-            <text>年龄</text> <input type="number" maxlength="2" focus value="{{volunteer.age}}" placeholder="请输入您的年龄" bindblur="inputVolunteerAge" />
-            <text>联系电话</text> <input type="number" focus value="{{volunteer.phoneNumber}}" bindblur="inputVolunteerPhoneNumber" placeholder="请输入您的联系电话" />
-            <button type="primary" bindtap="volunteerCommit">确认提交</button>
+                    </label>
+                </radio-group>
+            </view>
+            <view>
+                <text class="text" style="font-weight: 900;">年龄</text>
+                <input class="text" style="float: right;" type="number" maxlength="2" focus value="{{volunteer.age}}" placeholder="请输入您的年龄" bindblur="inputVolunteerAge" />
+            </view>
+            <view>
+                <text class="text" style="font-weight: 900;">联系电话</text> <input class="text" style="float: right;" type="number" focus value="{{volunteer.phoneNumber}}" bindblur="inputVolunteerPhoneNumber" placeholder="请输入您的联系电话" />
+            </view>
+            <button class="submit" type="primary" bindtap="volunteerCommit">确认提交</button>
         </form>
     </view>
 
-    <view hidden='{{identity !== "community"}}'>
+    <view class="info" hidden='{{identity !== "community"}}'>
         <form>
-            <text>社区名</text> <input focus value="{{community.name}}" placeholder="请输入社区的名字" bindblur="inputCommunityName" />
-            <text>联系人姓名</text> <input focus value="{{community.contact}}" placeholder="请输入社区联系人的姓名" bindblur="inputCommunityContact" />
-            <text>联系电话</text> <input type="number" focus value="{{community.phoneNumber}}" bindblur="inputCommunityPhoneNumber" placeholder="请输入社区的联系电话" />
             <view>
-                <text>请上传一份文件来进行社区认证</text>
-                <button bindtap="chooseFile">选择文件</button>
-                <text>{{fileName}}</text>     
+                <text class="text" style="font-weight: 900;">社区名</text>
+                <input class="text" focus value="{{community.name}}" style="float: right;" placeholder="请输入社区的名字" bindblur="inputCommunityName" />
             </view>
-            <button type="primary" bindtap="communityCommit">确认提交</button>
+            <View>
+                <text class="text" style="font-weight: 900;">联系人姓名</text>
+                <input class="text" focus value="{{community.contact}}" style="float: right;" placeholder="请输入社区联系人的姓名" bindblur="inputCommunityContact" />
+            </View>
+            <view>
+                <text class="text" style="font-weight: 900;">联系电话</text>
+                <input class="text" type="number" focus value="{{community.phoneNumber}}" style="float: right;" bindblur="inputCommunityPhoneNumber" placeholder="请输入社区的联系电话" />
+            </view>
+            <view>
+                <text class="text" style="font-weight: 900;">请上传社区认证文件</text>
+                <button class="text" bindtap="chooseFile">选择</button>
+                <input focus value="{{fileName}}" style="float: left;" placeholder="" disabled="true"/>
+            </view>
+            <button class="submit" type="primary" bindtap="communityCommit">确认提交</button>
         </form>
     </view>
 </view>
