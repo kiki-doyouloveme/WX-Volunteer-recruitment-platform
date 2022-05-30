@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 /* pages/login/login.wxss */
 page {
@@ -20,4 +21,27 @@ page {
     bottom: 20%;
     left: 50%;
     transform: translateX(-50%);
+=======
+/* pages/login/login.wxss */
+page {
+    padding-top: 54rpx;
+    background-color: #fff;
+    padding-bottom: 60rpx;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.logo {
+    position: fixed;
+    top: 25%;
+    left: 56rpx;
+}
+
+.loginButton {
+    position: fixed;
+    bottom: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+>>>>>>> master
 }

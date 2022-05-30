@@ -1,1 +1,27 @@
 /* pages/newAccount/newAccount.wxss */
+.container {
+    text-align: middle;
+    line-height: 50px;
+    margin-top: 30px;
+}
+.info {
+    width: 320px;
+    text-align: middle;
+    margin-top: 80px;
+    line-height: 50px;
+}
+.text {
+    display: inline-block;
+    height: 50px;
+    line-height: 50px;
+    vertical-align: middle;
+}
+.sex {
+    display: block;
+}
+.submit {
+    position: fixed;
+    margin-top: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+}

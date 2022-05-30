@@ -48,11 +48,14 @@ Page({
                                     },
                                     success: res => {
                                         // 将用户信息存储到本地缓存中
+                                        let identity = res.result.identity
                                         wx.setStorage({
                                             key: "accountInfo",
-                                            data: res.result
+                                            data: res.result,
+                                            success: res => {
+                                                that.navigateToHost(identity)
+                                            }
                                         })
-                                        that.navigateToHost(res.result.identity)
                                     }
                                 })
                             },
