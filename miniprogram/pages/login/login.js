@@ -32,7 +32,7 @@ Page({
                             desc: '用于完善会员资料', // 声明获取用户个人信息后的用途
                             lang: 'zh_CN',
                             success(info) {
-                                console.log(info)
+                                console.log("info:",info)
                                 that.data.loginInfo.nickName = info.userInfo.nickName
                                 that.data.loginInfo.avatarUrl = info.userInfo.avatarUrl
                                 // 显示一个图标
@@ -90,4 +90,5 @@ Page({
           url: toUrl
         })
     },
+
 })

@@ -1,0 +1,120 @@
+<!--pages/community/create/create.wxml-->
+<!-- 导航栏 -->
+<view >
+    <van-nav-bar
+    title="编辑志愿服务信息"
+    left-text="返回"
+    custom-style="padding-top:0px"
+    left-arrow
+    bind:click-left="onClickLeft"
+    />
+</view>
+<!-- 编辑信息栏 -->
+<view class="post_info">
+    <van-cell-group>
+        <van-field
+        model:value="{{ sponsor }}"
+        placeholder="发起人"
+        required
+        clearable
+        label="发起人"
+        />
+        
+        <van-field
+        model:value="{{ subject }}"
+        placeholder="志愿活动主题"
+        required
+        clearable
+        label="志愿主题"
+        />
+        <van-field
+        model:value="{{ location }}"
+        placeholder="志愿活动地点"
+        required
+        clearable
+        label="地点"
+        />
+        <van-field
+        model:value="{{ startDate }}"
+        placeholder="志愿活动开始日期"
+        required
+        clearable
+        label="开始日期"
+        />
+        <van-field
+        model:value="{{ startTime }}"
+        placeholder="志愿活动开始时间"
+        required
+        clearable
+        label="开始时间"
+        />
+        <van-field
+        model:value="{{ endDate }}"
+        placeholder="志愿活动结束日期"
+        required
+        clearable
+        label="结束日期"
+        />
+        <van-field
+        model:value="{{ endTime }}"
+        placeholder="志愿活动结束时间"
+        required
+        clearable
+        label="结束时间"
+        />
+        <van-field
+        model:value="{{ discription }}"
+        type="textarea"
+        placeholder="志愿活动简单描述"
+        required
+        autosize="true"
+        label="描述"
+        maxlength="{{500}}"
+        show-word-limit="{{true}}"
+        />
+        <van-field
+        model:value="{{ requirement }}"
+        type="textarea"
+        placeholder="志愿者招聘需求"
+        autosize="true"
+        label="需求描述"
+        maxlength="{{300}}"
+        show-word-limit="{{true}}"
+        />
+        <van-field
+        model:value="{{ phoneNumber }}"
+        type="digit"
+        placeholder="联系电话"
+        label="电话"
+        required
+        clearable
+        />
+        <van-field
+        model:value="{{ email }}"
+        placeholder="邮箱地址"
+        label="邮箱"
+        required
+        clearable
+        />
+    </van-cell-group>
+    
+</view>
+<!-- 添加海报 -->
+<view class="add_post">
+    <view class="post_img">
+        <text>添加活动海报</text>
+        <van-button type="primary" size="small" bind:click="add_img">{{ifimg}}</van-button>
+    </view>
+    <van-divider style="width:100%;" custom-style="margin-top:10rpx;margin-buttom:10rpx"></van-divider>
+    <view class="display_post">
+        <image src="{{img}}" mode="widthFix" class="diaplay_img"  bind:longpress="delete_img"></image> 
+    </view>
+</view>
+<!-- 提交按钮 -->
+<view class="lay_col_spa" style="height:100px ">
+    <van-button type="primary" size="large" bind:click="submit_postInfo" >提交</van-button>
+</view>
+
+
+
+    

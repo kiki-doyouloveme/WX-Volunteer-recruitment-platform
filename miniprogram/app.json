@@ -1,10 +1,14 @@
 {
+  "usingComponents": {
+    "van-popup": "@vant/weapp/popup/index"
+    },
   "pages": [
     "pages/login/login",
     "pages/index/index",
     "pages/newAccount/newAccount",
     "pages/volunteer/home/home",
     "pages/community/home/home",
+    "pages/community/create/create",
     "pages/getOpenId/index",
     "pages/getMiniProgramCode/index",
     "pages/deployService/index",
@@ -24,6 +28,5 @@
     "navigationBarTitleText": "村募",
     "navigationBarTextStyle": "black"
   },
-  "sitemapLocation": "sitemap.json",
-  "style": "v2"
+  "sitemapLocation": "sitemap.json"
 }

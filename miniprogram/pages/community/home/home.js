@@ -7,7 +7,15 @@ Page({
     data: {
 
     },
-
+    createInfo()
+    {
+        console.log(123)
+        var toUrl = ''
+        toUrl = '/pages/community/create/create'
+        wx.redirectTo({
+          url: toUrl,
+        })
+    },
     /**
      * 生命周期函数--监听页面加载
      */

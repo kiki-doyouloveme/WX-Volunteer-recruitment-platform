@@ -1,2 +1,6 @@
 <!--pages/community/home/home.wxml-->
-<text>乡村社区主页</text>
+<view>乡村社区主页面</view>
+<view class="edit" bindtap="createInfo">
+    <van-icon name="edit" size="50px" />
+    <text>发布招聘信息</text>
+</view>

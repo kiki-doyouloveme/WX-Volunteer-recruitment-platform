@@ -1,1 +1,6 @@
 /* pages/community/home/home.wxss */
+.edit{
+    background-color: aqua;
+    margin: 20px;
+    padding: 10px;
+}
